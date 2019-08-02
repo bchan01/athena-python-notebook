@@ -2,7 +2,7 @@ notebook:
   image: scipy-athena:dev
   environment:
     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-    AWS_SECRET_ACCESS_KEY: g12HQjQSv+xppNJSHUWX18XnlKUw8LMF0A8cyYel
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
     AWS_REGION: ${AWS_REGION}
     AWS_S3_STAGING: ${AWS_S3_STAGING}
   ports:
