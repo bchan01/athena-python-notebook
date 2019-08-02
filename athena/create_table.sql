@@ -1,0 +1,15 @@
+CREATE EXTERNAL TABLE mydatabase.historical_stock_price (
+  symbol STRING,
+  trade_date DATE,
+  OPEN_PRICE DOUBLE,
+  HIGH_PRICE DOUBLE,
+  LOW_PRICE DOUBLE,
+  CLOSE_PRICE DOUBLE,
+  ADJUSTED_CLOSE DOUBLE,
+  VOLUME DOUBLE
+) 
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY ','
+  ESCAPED BY '\\'
+  LINES TERMINATED BY '\n'
+LOCATION 's3://polyglot-computing.stock.hist/';

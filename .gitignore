@@ -1,0 +1,6 @@
+.env
+jupyter/.cache
+jupyter/.config
+jupyter/.ipynb_checkpoints
+jupyter/.ipython
+jupyter/.local
