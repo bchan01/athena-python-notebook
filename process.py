@@ -8,12 +8,12 @@ for symbol in symbols:
     line_count = 0
     with open(input + symbol + '.csv', 'r') as file:
         for line in file:
-            if line_count > 0:
-                line = line.strip()
-                line = symbol + "," + line
-                if line_count > 1:
-                    out_file.write('\n')
-                out_file.write(line)
+            if line_count == 0:
+                line = "Symbol, Date, Open, High, Low, Close, Adjusted_Close, Volume"
+            else:
+                line = symbol + "," + line.strip()
+                out_file.write('\n')
+            out_file.write(line)
             line_count += 1
     out_file.close()
 
