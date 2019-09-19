@@ -1,2 +1,3 @@
-select * from mydatabase.historical_stock_price 
-where symbol = 'COF' and trade_date > date('2019-07-20')
+select *
+from "stock-price-db"."raw"
+where symbol = 'GOOG' and date(date) > date('2019-07-20')

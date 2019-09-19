@@ -1,15 +1,15 @@
-CREATE EXTERNAL TABLE mydatabase.historical_stock_price (
+CREATE EXTERNAL TABLE "stock-price-db"."raw" (
   symbol STRING,
-  trade_date DATE,
-  OPEN_PRICE DOUBLE,
-  HIGH_PRICE DOUBLE,
-  LOW_PRICE DOUBLE,
-  CLOSE_PRICE DOUBLE,
-  ADJUSTED_CLOSE DOUBLE,
-  VOLUME DOUBLE
+  date STRING,
+  open DOUBLE,
+  high DOUBLE,
+  low DOUBLE,
+  close DOUBLE,
+  adjusted_close DOUBLE,
+  VOLUME BIGINT
 ) 
 ROW FORMAT DELIMITED
   FIELDS TERMINATED BY ','
   ESCAPED BY '\\'
   LINES TERMINATED BY '\n'
-LOCATION 's3://polyglot-computing.stock.hist/';
+LOCATION 's3://YOUR_BUCKET/YOUR_PATH';
