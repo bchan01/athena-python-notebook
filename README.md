@@ -5,20 +5,20 @@
 1. Download a few historical stock price CSV files from Yahoo Finance
 
 2. Cleanup the file data and GZIP the file
+
 ```
 python process.py
 ```
+
 3. Upload GZIP files to S3 Bucket
 
-4. Create Athena Database (database name: mydatabase)
-
-5. Create Athena Table pointing to the S3 Bucket (table name: historical_stock_price)
-
-6. Run few queries in Athena for verifications
+4. Login to Athena and Try out some queries
 
 ```
-select count(*) from mydatabase.historical_stock_price where symbol = 'GOOG' 
-select * from mydatabase.historical_stock_price where symbol = 'GOOG' and trade_date > date('2019-07-20')
+select count(*) from "stock-price-db"."raw" where symbol = 'GOOG' 
+
+select * from "stock-price-db"."raw" where symbol = 'GOOG' and date(date) > date('2019-07-20')
+
 ```
 
 ## Build and launch Jupyter Notebook
