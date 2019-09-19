@@ -4,8 +4,8 @@ import seaborn
 import os
 
 #environment vars
-access_key = os.environ['AWS_ACCESS_KEY_ID']
-secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
+access_key = os.environ['AWS_KEY']
+secret_key = os.environ['AWS_SECRET']
 staging = os.environ['AWS_S3_STAGING']
 region = os.environ['AWS_REGION']
 
