@@ -4,10 +4,9 @@
 
 1. Download a few historical stock price CSV files from Yahoo Finance
 
-2. Cleanup the file data and GZIP the file
-
 ```
-python process.py
+pip install pandas
+python get_data.py
 ```
 
 3. Upload GZIP files to S3 Bucket
